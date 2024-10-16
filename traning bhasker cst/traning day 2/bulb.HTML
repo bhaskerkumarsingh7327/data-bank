@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cover {
+
+            background-color: antiquewhite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+
+        }
+
+
+
+
+
+        #heading {
+            text-align: center;
+        }
+
+        #bulb {
+            height: 400px;
+            width: 400px;
+            border: black 3px solid;
+            border-radius: 20%;
+            background-color: gray;
+            margin: 20px;
+
+        }
+
+        button {
+            border: black 3px solid;
+            border-radius: 20px;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cover">
+        <h1 id="heading">hello</h1>
+        <div id="bulb"></div>
+        <button onclick="bulbswitch()">Click Me</button>
+    </div>
+    <script>
+        let status = false;
+        const bulbswitch = () => {
+            if (status) {
+                document.getElementById('bulb').style.backgroundColor = "gray"
+                document.getElementById('heading').innerHTML = "Bulb is off 😊"
+                status = false
+            }
+            else {
+                document.getElementById('bulb').style.backgroundColor = "yellow"
+                document.getElementById('heading').innerHTML = "Bulb is on 😁"
+                status = true
+            }
+
+        }
+    </script>
+</body>
+
+</html>

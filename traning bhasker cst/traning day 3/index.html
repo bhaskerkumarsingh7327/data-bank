@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="name2">username</h2>
+    <h1 id="name">username</h1>
+    <button onclick="buttonp()">change name</button>
+    <button onclick="showalert()">this will show an alert</button>
+    <button onclick="confirm()">this will show an confirmation</button>
+    <button onclick="closej()">this will close window</button>
+    <script>
+        const buttonp = () => {
+            const name =window.prompt("enter your name")
+            document.getElementById('name').innerHTML = name
+        }
+
+            const showalert = () => {
+         window.alert("this is the alert")
+
+        }
+        
+        const confirm = () =>{
+
+            window.confirm("this is confirm")
+            
+        }
+
+        const changename2=()=>{
+            document.getElementById('name2').innerHTML='bhasker'
+        }
+        setTimeout(()=>{
+            changename2()
+        },5000)
+
+      
+        setInterval(()=>{
+            console.log("tic tic")
+            console.log("")
+        },1000)
+
+        const closej=()=>{
+        setInterval(()=>{
+           window.close()
+        },1000)  }
+
+
+        
+    </script>
+
+
+
+</body>
+
+</html>
